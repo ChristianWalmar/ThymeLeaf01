@@ -10,11 +10,26 @@ public class MyController {
 
     private int counter;
 
-    @GetMapping("/")
+    @GetMapping("/visit")
     public String visit(Model model){
         counter++;
         model.addAttribute("counter", counter);
         return "visit";
+    }
+
+    @GetMapping("/index")
+    public String index(){
+        return "index";
+    }
+
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    @GetMapping("/loggedin")
+    public String loggedIn(){
+        return "loggedin";
     }
 
 }
