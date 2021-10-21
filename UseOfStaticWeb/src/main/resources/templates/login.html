@@ -5,11 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<form method = "POST" action = "/index">
-    User name: <input type = text name = description>
-    Password: <input type = text name = quantity>
-    <input type = "submit" value = "Login"/>
+<form method = "POST" >
+    User name: <input type = text name = userName>
+    Password: <input type = text name = password>
+    <input type = "submit" value = "Login" formaction = "/index"/>
+    <input type = "submit" value = "Create User" formaction = "/create"/>
 </form>
+
+<p th:text="${failedLogin}"><p>
 
 </body>
 </html>
